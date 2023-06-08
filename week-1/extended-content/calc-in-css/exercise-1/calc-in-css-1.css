@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    height: 50px;
+}
+
+.left {
+    flex-grow: 1;
+    width: calc(100% - 20px);
+    background-color: pink;
+}
+
+.right {
+    width: 20px;
+    background-color: coral;
+}

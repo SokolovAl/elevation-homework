@@ -1,0 +1,13 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    height: 50px;
+    width: 100px;
+    background-color: gray;
+    position: absolute;
+    left: 50%;
+}

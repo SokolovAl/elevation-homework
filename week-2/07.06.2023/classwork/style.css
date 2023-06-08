@@ -1,0 +1,27 @@
+#parent {
+    height: 188px;
+    width: 267px;
+    position: relative;
+    margin: auto;
+    background-image: url("image.jpeg");
+    background-repeat: no-repeat;
+}
+
+.child {
+    padding: 5px;
+    position: absolute;
+    color: red;
+}
+
+#child2 {
+    right: 0;
+}
+
+#child3 {
+    bottom: 0;
+}
+
+#child4 {
+    right: 0;
+    bottom: 0;
+}

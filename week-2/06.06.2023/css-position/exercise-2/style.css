@@ -1,0 +1,60 @@
+#container {
+    width: 400px;
+    height: 300px;
+    background-color: #622fb6;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.column {
+    background-color: gray;
+    position: absolute;
+    width: 30px;
+    bottom: 10px;
+}
+
+#column1 {
+    height: 50px;
+    left: 10px;
+}
+
+#column2 {
+    height: 130px;
+    left: 60px;
+}
+
+#column3 {
+    height: 200px;
+    left: 110px;
+}
+
+#column4 {
+    height: 180px;
+    left: 160px;
+}
+
+#column5 {
+    height: 160px;
+    left: 210px;
+}
+
+#column6 {
+    height: 120px;
+    left: 260px;
+}
+
+.text {
+    font-family: Arial;
+    text-align: center;
+    position: absolute;
+}
+
+#money {
+    top: 10px;
+    left: 10px;
+}
+
+#time {
+    right: 10px;
+    bottom: 10px;
+}

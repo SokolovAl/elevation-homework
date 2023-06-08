@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    padding: 10px;
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.content {
+    margin-top: 70px;
+    padding: 20px;
+}

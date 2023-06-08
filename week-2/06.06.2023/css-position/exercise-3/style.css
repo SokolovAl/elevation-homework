@@ -1,0 +1,39 @@
+.red {
+    position: absolute;
+    background-color: red;
+    width: 400px;
+    height: 280px;
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.gray {
+    background-color: lightgrey;
+    height: 85px;
+    width: 85px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#left {
+    position: absolute;
+    right: 0;
+}
+
+#right {
+    position: absolute;
+    left: 0;
+}
+
+.white {
+    position: absolute;
+    background-color: white;
+    width: 245px;
+    height: 200px;
+    top: 0;
+    left: 75px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
