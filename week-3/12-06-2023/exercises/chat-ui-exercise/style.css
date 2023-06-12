@@ -1,0 +1,87 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#chat {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 15fr 1fr;
+    grid-template-areas:
+    "f c"
+    "f i";
+}
+
+h3 {
+    padding: 10px;
+}
+
+#friends > p {
+    background-color: #9a59b5;
+    text-align: start;
+    margin: 10px;
+    padding: 10px;
+    height: 25px;
+}
+
+#friends {
+    background-color: #8d44ac;
+    grid-area: f;
+    display: grid;
+}
+
+#chatbox {
+    grid-area: c;
+    display: grid;
+}
+
+#input {
+    grid-area: i;
+    display: grid;
+    grid-template-columns: auto min-content;
+}
+
+.text-container-left {
+    display: grid;
+    grid-template-columns: auto min-content;
+    background-color: gray;
+    height: max-content;
+    width: max-content;
+    place-self: start;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.text-container-right {
+    display: grid;
+    grid-template-columns: auto min-content;
+    background-color: greenyellow;
+    height: max-content;
+    width: max-content;
+    place-self: end;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+#input > div {
+    background-color: #8d44ac;
+    border: none;
+    width: 200px;
+    text-align: center;
+    color: white;
+    display: grid;
+    place-content: center;
+}
+
+.text {
+    margin: 15px;
+}
+
+.time {
+    display: grid;
+    align-items: end;
+    margin: 15px;
+    font-size: 10px;
+}
