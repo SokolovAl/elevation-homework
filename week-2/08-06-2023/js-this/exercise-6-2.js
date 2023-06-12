@@ -1,6 +1,7 @@
 const coffeeShop = {
     beans: 40,
     money: 100,
+    beanPrice: 5,
 
     drinkRequirements: {
         latte: {beanRequirement: 10, price: 5},
@@ -21,8 +22,7 @@ const coffeeShop = {
     },
 
     buyBeans: function (numBeans) {
-        const beanPrice = 5;
-        const totalPrice = numBeans * beanPrice;
+        const totalPrice = numBeans * this.beanPrice;
 
         if (totalPrice > this.money) {
             console.log(`Not enough money to buy ${numBeans} beans`);
