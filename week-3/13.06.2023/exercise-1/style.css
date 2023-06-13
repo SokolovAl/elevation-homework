@@ -12,19 +12,22 @@ body {
     padding: 25px;
     height: 100vh;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-areas:
             "ltp rte"
+            "ltp rte"
             "c c"
+            ". rbc"
+            ". rbc"
             ". rbc";
 }
 
 #left-top-container {
     grid-area: ltp;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 2fr);
     grid-template-areas:
@@ -77,7 +80,7 @@ body {
 #right-bottom-container {
     grid-area: rbc;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
             "rbel"
@@ -96,7 +99,7 @@ body {
     padding: 15px;
     grid-area: irbc;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     border: 1px solid black;
     box-shadow: 3px 3px #565656;
     background-color: deepskyblue;
