@@ -1,0 +1,123 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    padding: 25px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-areas:
+            "ltp rte"
+            "c c"
+            ". rbc";
+}
+
+#left-top-container {
+    grid-area: ltp;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-areas:
+            "lte1 lte2"
+            "lte3 lte3";
+}
+
+.ltp-el {
+    height: 100%;
+    border: 1px solid black;
+    box-shadow: 3px 3px #565656;
+    align-self: end;
+}
+
+#left-top-el-1 {
+    grid-area: lte1;
+}
+
+#left-top-el-2 {
+    grid-area: lte2;
+}
+
+#left-top-el-3 {
+    grid-area: lte3;
+    background-color: purple;
+    align-self: start;
+}
+
+#right-top-element {
+    height: 100%;
+    width: 300px;
+    grid-area: rte;
+    display: grid;
+    place-self: center;
+    background-image: radial-gradient(white, gray);
+    border: 1px solid black;
+    border-radius: 100%;
+    box-shadow: 3px 3px #565656;
+}
+
+#center-element {
+    grid-area: c;
+    height: 100%;
+    background: blueviolet;
+    border: 1px solid black;
+    box-shadow: 3px 3px #565656;
+    align-self: center;
+}
+
+#right-bottom-container {
+    grid-area: rbc;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+            "rbel"
+            "irbc"
+            "irbc";
+}
+
+#right-bottom-el-1 {
+    grid-area: rbel;
+    background-color: purple;
+    border: 1px solid black;
+    box-shadow: 3px 3px #565656;
+}
+
+#inner-right-bottom-container {
+    padding: 15px;
+    grid-area: irbc;
+    display: grid;
+    grid-gap: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px #565656;
+    background-color: deepskyblue;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+            "irbcel1 ."
+            ". irbcel2";
+}
+
+
+.irbc-el {
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 3px 3px #565656;
+}
+
+#inner-right-bottom-el-1 {
+    grid-area: irbcel1;
+}
+
+#inner-right-bottom-el-2 {
+    grid-area: irbcel2;
+}
