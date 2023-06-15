@@ -1,0 +1,86 @@
+#container {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    padding: 10px;
+    background-color: #1abb9b;
+    border: 2px solid #169f84;
+    border-radius: 5px;
+}
+
+input {
+    position: absolute;
+    height: 50px;
+    border: none;
+}
+
+.labels {
+    position: absolute;
+}
+
+#nameLabel {
+    top: 25px;
+    left: 50px;
+}
+
+#salaryLabel {
+    top: 125px;
+    left: 50px;
+}
+
+#birthdayLabel {
+    top: 125px;
+    right: 175px;
+}
+
+#phoneLabel {
+    top: 225px;
+    left: 50px;
+}
+
+#nameInput {
+    width: 400px;
+    top: 50px;
+    left: 50px;
+}
+
+#salaryInput {
+    width: 190px;
+    top: 150px;
+    left: 50px;
+}
+
+#birthdayInput {
+    width: 190px;
+    top: 150px;
+    right: 65px;
+}
+
+#phoneInput {
+    width: 400px;
+    top: 250px;
+    left: 50px;
+}
+
+#errorContainer {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+#submitBtn {
+    position: absolute;
+    right: 50px;
+    bottom: 60px;
+    border: none;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #169f84;
+    box-shadow: 2px 3px gray;
+}
+
+.error {
+    color: darkred;
+    align-self: flex-start;
+}
