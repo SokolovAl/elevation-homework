@@ -4,6 +4,7 @@ const birthdayInput = document.getElementById("birthdayInput");
 const phoneInput = document.getElementById("phoneInput");
 const submitButton = document.getElementById("submitBtn");
 const errorContainer = document.getElementById("errorContainer");
+const form = document.getElementById("container");
 
 submitButton.addEventListener("click", validate);
 
@@ -61,7 +62,14 @@ function validate(event) {
     if (isNaN(phone) || phone.length !== 10) {
         errorMsg = "Phone must be 10 digits long";
         displayErrorMessages(errorMsg);
+        return;
     }
+
+    form.style.display = "none";
+
+    const welcomeMessage = document.createElement("p");
+    welcomeMessage.innerHTML = `Welcome, ${name}!`;
+    document.body.appendChild(welcomeMessage);
 }
 
 function clearErrorMessages() {
