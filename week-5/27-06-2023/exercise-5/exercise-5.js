@@ -9,12 +9,12 @@ const fruits = [
     {name: "Pumpkin", color: "orange"}
 ]
 $(document).ready(function () {
-    $("#basket").append(
+    $(`#basket`).append(
         $.each(fruits, function (index, fruit) {
-            $("<div>")
+            $(`<div>`)
                 .text(fruit.name)
                 .addClass(fruit.color)
-                .appendTo("#basket");
+                .appendTo(`#basket`);
         })
     );
 });
