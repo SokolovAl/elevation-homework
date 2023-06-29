@@ -6,8 +6,8 @@ const downBtn = document.getElementById("down");
 const ball = document.getElementById("ball");
 const fieldWidth = playingField.offsetWidth;
 const fieldHeight = playingField.offsetHeight;
-const ballHeight = ball.offsetHeight + 15;
-const ballWidth = ball.offsetWidth + 15;
+const ballHeight = ball.offsetHeight;
+const ballWidth = ball.offsetWidth;
 
 upBtn.onclick = () => moveUp();
 leftBtn.onclick = () => moveLeft();
@@ -16,32 +16,32 @@ downBtn.onclick = () => moveDown();
 
 const moveUp = function () {
     let top = parseInt(ball.style.top) || 0;
+    top -= 15;
     if (top > 0) {
-        top -= 15;
         ball.style.top = top + "px";
     }
 };
 
 const moveLeft = function () {
     let left = parseInt(ball.style.left) || 0;
+    left -= 15;
     if (left > 0) {
-        left -= 15;
         ball.style.left = left + "px";
     }
 };
 
 const moveRight = function () {
     let left = parseInt(ball.style.left) || 0;
+    left += 15;
     if (left < fieldWidth - ballWidth) {
-        left += 15;
         ball.style.left = left + "px";
     }
 };
 
 const moveDown = function () {
     let top = parseInt(ball.style.top) || 0;
+    top += 15;
     if (top < fieldHeight - ballHeight) {
-        top += 15;
         ball.style.top = top + "px";
     }
 };
