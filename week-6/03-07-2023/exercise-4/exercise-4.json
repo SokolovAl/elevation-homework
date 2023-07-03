@@ -1,0 +1,25 @@
+{
+  "name": "Cow",
+  "weight": {
+    "kilograms": 800,
+    "tons": 0.8
+  },
+  "habitat": "Grasslands",
+  "endangered": false,
+  "diet": [
+    {
+      "food": "Grass",
+      "percentage": 60
+    },
+    {
+      "food": "Hay",
+      "percentage": 40
+    }
+  ],
+  "predators": [
+    "Human",
+    "Wolf",
+    "Bear"
+  ],
+  "deliciousness": 4
+}
