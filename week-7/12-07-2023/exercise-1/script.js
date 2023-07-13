@@ -14,14 +14,13 @@ function fetchBookByWord(word) {
 
 function getRandomBookByWord() {
     fetchRandomWord()
-        .then(data => {
-            const word = data[0];
+        .then(word => {
             document.getElementById("container").getElementsByTagName("p")[0].innerText = `Random word - ${word}`;
             return fetchBookByWord(word);
         })
-        .then(data => {
-            if (data.items && data.items.length > 0) {
-                const bookTitle = data.items[0].volumeInfo.title;
+        .then(books => {
+            if (books.items && books.items.length > 0) {
+                const bookTitle = books.items[0].volumeInfo.title;
                 document.getElementById("container").getElementsByTagName("p")[1].innerText = `Book title - ${bookTitle}`;
             } else {
                 throw new Error(`No books found for this word`);
