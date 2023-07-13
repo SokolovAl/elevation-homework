@@ -7,7 +7,7 @@ function fetchRandomWord() {
 }
 
 function fetchBookByWord(word) {
-    const apiUrl = `${googleBooksApiUrl}${encodeURIComponent(word)}`;
+    const apiUrl = `${googleBooksApiUrl}${(word)}`;
     return fetch(apiUrl)
         .then(response => response.json());
 }
