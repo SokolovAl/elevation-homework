@@ -23,11 +23,10 @@ function getRandomBookByWord() {
                 const bookTitle = books.items[0].volumeInfo.title;
                 document.getElementById("container").getElementsByTagName("p")[1].innerText = `Book title - ${bookTitle}`;
             } else {
-                throw new Error(`No books found for this word`);
+                throw new Error("No books found for this word");
             }
         })
         .catch(error => {
-            console.error(error);
             document.getElementById("container").getElementsByTagName("p")[1].innerText = `Error: ${error.message}`;
         });
 }
