@@ -13,7 +13,7 @@ function App() {
     };
 
     const dataForExercise2 = {
-        displayConversation: 1,
+        displayConversation: null,
         conversations: [
             {
                 with: "Laura", convo: [
