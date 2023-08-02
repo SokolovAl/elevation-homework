@@ -7,7 +7,6 @@ function addToWisdom() {
         wisdom.push(textObject);
         updateWisdomDisplay();
         saveToLocalStorage();
-
         document.getElementById("userInput").value = "";
     }
 }
@@ -16,11 +15,32 @@ function updateWisdomDisplay() {
     const wisdomDisplay = document.getElementById("wisdomDisplay");
     wisdomDisplay.innerHTML = "";
 
-    wisdom.forEach((item) => {
+    wisdom.forEach((item, index) => {
         const textElement = document.createElement("p");
         textElement.textContent = item.text;
+
+        const deleteButton = document.createElement("span");
+        deleteButton.textContent = " x";
+        deleteButton.style.cursor = "pointer";
+        deleteButton.addEventListener("click", () => {
+            removeWisdom(index);
+        });
+
+        textElement.appendChild(deleteButton);
         wisdomDisplay.appendChild(textElement);
     });
+}
+
+function removeWisdom(index) {
+    wisdom.splice(index, 1);
+    updateWisdomDisplay();
+    saveToLocalStorage();
+}
+
+function clearWisdom() {
+    wisdom = [];
+    updateWisdomDisplay();
+    localStorage.removeItem("wisdomData");
 }
 
 function saveToLocalStorage() {
