@@ -1,0 +1,40 @@
+let wisdom = [];
+
+function addToWisdom() {
+    const userInput = document.getElementById("userInput").value;
+    if (userInput.trim() !== "") {
+        const textObject = {text: userInput};
+        wisdom.push(textObject);
+        updateWisdomDisplay();
+        saveToLocalStorage();
+
+        document.getElementById("userInput").value = "";
+    }
+}
+
+function updateWisdomDisplay() {
+    const wisdomDisplay = document.getElementById("wisdomDisplay");
+    wisdomDisplay.innerHTML = "";
+
+    wisdom.forEach((item) => {
+        const textElement = document.createElement("p");
+        textElement.textContent = item.text;
+        wisdomDisplay.appendChild(textElement);
+    });
+}
+
+function saveToLocalStorage() {
+    if (wisdom.length % 2 === 0) {
+        localStorage.setItem("wisdomData", JSON.stringify(wisdom));
+    }
+}
+
+function loadFromLocalStorage() {
+    const storedWisdom = localStorage.getItem("wisdomData");
+    if (storedWisdom) {
+        wisdom = JSON.parse(storedWisdom);
+        updateWisdomDisplay();
+    }
+}
+
+loadFromLocalStorage();
