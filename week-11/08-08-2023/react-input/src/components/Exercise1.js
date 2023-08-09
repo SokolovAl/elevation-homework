@@ -10,7 +10,7 @@ const Exercise1 = () => {
     const handleButtonClick = () => {
         if (person.name && person.age) {
             alert(`Come in ${person.name}, you’re ${person.age} - that’s good enough`);
-            setPerson({name: "", age: ""}); // Очищаем поля ввода
+            setPerson({name: "", age: ""});
         } else {
             alert("Please enter both name and age");
         }
