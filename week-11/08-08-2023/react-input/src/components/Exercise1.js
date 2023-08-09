@@ -10,6 +10,7 @@ const Exercise1 = () => {
     const handleButtonClick = () => {
         if (person.name && person.age) {
             alert(`Come in ${person.name}, you’re ${person.age} - that’s good enough`);
+            setPerson({name: "", age: ""}); // Очищаем поля ввода
         } else {
             alert("Please enter both name and age");
         }
@@ -18,15 +19,17 @@ const Exercise1 = () => {
     return (
         <div>
             <h1>Exercise 1</h1>
-            <input id = "name-input"
-                   onChange = {(e) => handleChange(e, "name")}
-                   value = {person.name}
-                   placeholder = "Enter your name"
+            <input
+                id = "name-input"
+                onChange = {(e) => handleChange(e, "name")}
+                value = {person.name}
+                placeholder = "Enter your name"
             />
-            <input id = "age-input"
-                   onChange = {(e) => handleChange(e, "age")}
-                   value = {person.age}
-                   placeholder = "Enter your age"
+            <input
+                id = "age-input"
+                onChange = {(e) => handleChange(e, "age")}
+                value = {person.age}
+                placeholder = "Enter your age"
             />
             <button onClick = {handleButtonClick}>Go to Bar</button>
         </div>
