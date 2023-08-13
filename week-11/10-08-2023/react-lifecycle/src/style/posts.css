@@ -1,0 +1,20 @@
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.post-frame {
+    border: 1px solid #000;
+    padding: 10px;
+    height: 300px;
+    width: 100%;
+    box-sizing: border-box;
+}
